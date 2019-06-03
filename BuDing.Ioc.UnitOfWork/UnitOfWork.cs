@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.Common;
+using BuDing.Ioc.UnitOfWork.Abstractions;
 using BuDing.Ioc.UnitOfWork.Interfaces;
 
 namespace BuDing.Ioc.UnitOfWork
@@ -13,19 +13,44 @@ namespace BuDing.Ioc.UnitOfWork
 
         public IDbTransaction Transaction { get; set; }
         public IDbConnection Connection { get; }
-        public override IsolationLevel IsolationLevel { get; }
-
-
-        public override void Commit()
+        public IsolationLevel IsolationLevel { get; }
+        public UnitOfWork(IDbFactory factory, ISession session,
+            IsolationLevel isolationLevel = IsolationLevel.RepeatableRead, bool sessionOnlyForThisUnitOfWork = false) : base(factory)
         {
-            throw new NotImplementedException();
+            if (sessionOnlyForThisUnitOfWork)
+            {
+                Session = session;
+            }
+            Transaction = session.BeginTransaction(isolationLevel);
+            SqlDialect = session.SqlDialect;
         }
 
-        public override void Rollback()
+        protected bool Equals(UnitOfWork other)
         {
-            throw new NotImplementedException();
+            return _guid.Equals(other._guid);
         }
 
-        protected override DbConnection DbConnection { get; }
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((UnitOfWork)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return _guid.GetHashCode();
+        }
+
+        public static bool operator ==(UnitOfWork left, UnitOfWork right)
+        {
+            return Equals(left, right);
+        }
+
+        public static bool operator !=(UnitOfWork left, UnitOfWork right)
+        {
+            return !Equals(left, right);
+        }
     }
 }
