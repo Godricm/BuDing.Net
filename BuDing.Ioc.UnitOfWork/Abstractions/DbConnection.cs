@@ -32,7 +32,7 @@ namespace BuDing.Ioc.UnitOfWork.Abstractions
         }
 
         [Obsolete("Please use UnitOfWork")]
-        public IDbTransaction BeginTransaction(IsolationLevel il)
+        public IDbTransaction BeginTransaction(IsolationLevel isolationLevel)
         {
             InsureConnection();
             return Connection?.BeginTransaction(IsolationLevel);

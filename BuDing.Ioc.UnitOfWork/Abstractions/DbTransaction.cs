@@ -70,7 +70,7 @@ namespace BuDing.Ioc.UnitOfWork.Abstractions
             if (Transaction?.Connection == null) return;
             try
             {
-                Commit();
+                Transaction?.Commit();
                 Transaction?.Dispose();
             }
             catch

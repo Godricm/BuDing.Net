@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -9,19 +9,21 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.2" />
     <PackageReference Include="Castle.Windsor" Version="5.0.0" />
+    <PackageReference Include="Devart.Data.PostgreSql" Version="7.13.1366" />
     <PackageReference Include="FakeItEasy" Version="5.1.1" />
     <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.16" />
     <PackageReference Include="Ninject" Version="3.3.4" />
     <PackageReference Include="Ninject.Extensions.Conventions" Version="3.3.0" />
     <PackageReference Include="Ninject.Extensions.Factory" Version="3.3.2" />
     <PackageReference Include="Ninject.Extensions.Interception" Version="3.3.3" />
-    <PackageReference Include="nunit" Version="3.11.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" />
     <PackageReference Include="Simple.Migrations" Version="0.9.20" />
     <PackageReference Include="SimpleInjector" Version="4.6.0" />
     <PackageReference Include="StructureMap" Version="4.7.1" />
-    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.110" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.110" />
     <PackageReference Include="Unity" Version="5.10.3" />
   </ItemGroup>
 
