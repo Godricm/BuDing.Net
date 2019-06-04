@@ -36,7 +36,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Helpers
             _container.AddEntityFroozenOrDialogueState<TEntity>(mapping.IsFrozen || mapping.Dialect == sqlDialect);
         }
 
-        public bool? GetEntitySate<TEntity>() where TEntity : class
+        public bool? GetEntityState<TEntity>() where TEntity : class
         {
             return _container.GetState<TEntity>();
         }
