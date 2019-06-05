@@ -10,10 +10,7 @@ namespace BuDing.Ioc.UnitOfWork
         public SqlDialect SqlDialect { get; }
 
         private readonly  Guid _guid=Guid.NewGuid();
-
-        public IDbTransaction Transaction { get; set; }
-        public IDbConnection Connection { get; }
-        public IsolationLevel IsolationLevel { get; }
+          
         public UnitOfWork(IDbFactory factory, ISession session,
             IsolationLevel isolationLevel = IsolationLevel.RepeatableRead, bool sessionOnlyForThisUnitOfWork = false) : base(factory)
         {
