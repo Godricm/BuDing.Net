@@ -128,7 +128,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.SpecialTests
 
         private class TestSqlForGuid : Session<SqlConnection>, ITestSqlForGuid
         {
-            public TestSqlForGuid(IDbFactory factory) : base(factory, $@"Server=.\SQLEXPRESS;Database={DbName};Trusted_Connection=True;")
+            public TestSqlForGuid(IDbFactory factory) : base(factory, $@"Data Source=(localdb)\MSSQLLocalDB;Database={DbName};Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
             {
             }
         }

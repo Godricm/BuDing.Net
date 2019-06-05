@@ -33,6 +33,9 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.TestHelpers
 
             A.CallTo(() => _settings.ConnectionString)
                 .Returns($@"Data Source={path};Version=3;New=True;BinaryGUID=False;");
+
+            Connection = CreateSession(null);
+
             A.CallTo(() => Factory.Create<ITestSession>()).ReturnsLazily(CreateSession);
             A.CallTo(() => Factory.Create<ISession>()).ReturnsLazily(CreateSession);
             A.CallTo(() => Factory.Create<IUnitOfWork>(A<IDbFactory>._, A<ISession>._, IsolationLevel.Serializable))

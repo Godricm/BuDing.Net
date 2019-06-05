@@ -39,7 +39,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.ExampleTests.Repository
             var result = false;
             var expected = 2;
             var resultBrave = new Brave();
-            Assert.DoesNotThrow(async () =>
+            Assert.DoesNotThrowAsync(async () =>
            {
                using (var uow = Connection.UnitOfWork(IsolationLevel.Serializable))
                {
@@ -75,7 +75,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.ExampleTests.Repository
             var result = false;
             var expected = new Brave() { NewId = 2 };
             var resultBrave = new Brave();
-            Assert.DoesNotThrow(async () =>
+            Assert.DoesNotThrowAsync(async () =>
             {
                 repo.SaveOrUpdate<ITestSession>(expected);
                 result = await repo.DeleteByKeyAsync<ITestSession>(expected.Id);
