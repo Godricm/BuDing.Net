@@ -24,7 +24,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork
             if (_container.IsIEntity<TEntity, TPrimaryKey>())
             {
                 return uow.Connection.Execute(
-                    $"DEELET FROM {Sql.Table<TEntity>(uow.SqlDialect)} WHERE Id=@id",
+                    $"DELETE FROM {Sql.Table<TEntity>(uow.SqlDialect)} WHERE Id=@id",
                     new { Id = key }, uow.Transaction
                     ) == 1;
             }
