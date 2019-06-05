@@ -35,7 +35,7 @@ namespace BuDing.Ioc.UnitOfWork.Abstractions
         public IDbTransaction BeginTransaction(IsolationLevel isolationLevel)
         {
             InsureConnection();
-            return Connection?.BeginTransaction(IsolationLevel);
+            return Connection?.BeginTransaction(isolationLevel);
         }
 
         public void ChangeDatabase(string databaseName)
