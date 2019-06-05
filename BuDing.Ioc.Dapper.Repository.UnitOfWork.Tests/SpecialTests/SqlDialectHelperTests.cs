@@ -46,7 +46,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.SpecialTests
             var target = new SqlDialectHelper();
             target.Reset();
             var result = target.GetEntityState<Brave>();
-            Assert.That(result.HasValue, Is.True);
+            Assert.That(result.HasValue, Is.False);
         }
 
         [Test, Category("Integration")]

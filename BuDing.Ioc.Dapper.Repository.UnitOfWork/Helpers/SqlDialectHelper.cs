@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BuDing.Core.Extensions;
 using BuDing.Ioc.Dapper.Repository.UnitOfWork.Containers;
 using Dapper.FastCrud;
 
@@ -13,7 +14,7 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Helpers
 
         public void SetDialogueIfNeeded<TEntity>(Ioc.UnitOfWork.SqlDialect sqlDialect) where TEntity : class
         {
-
+            SetDialogueIfNeeded<TEntity>(EnumExtensions.ConvertEnumToEnum<SqlDialect>(sqlDialect));
         }
 
         public void SetDialogueIfNeeded<TEntity>(SqlDialect sqlDialect) where TEntity : class
@@ -24,10 +25,11 @@ namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Helpers
             }
 
             var mapping = OrmConfiguration.GetDefaultEntityMapping<TEntity>();
-            if (mapping.IsFrozen && mapping.Dialect != sqlDialect)
+            if (!mapping.IsFrozen && mapping.Dialect != sqlDialect)
             {
                 lock (_locakSqlDialectUpdate)
                 {
+                    //reload to be true
                     mapping = OrmConfiguration.GetDefaultEntityMapping<TEntity>();
                     if (mapping.IsFrozen || mapping.Dialect == sqlDialect) return;
                     mapping.SetDialect(sqlDialect);
