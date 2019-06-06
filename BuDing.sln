@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuDing.Ioc.Dapper.Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuDing.JwtBearer", "BuDing.JwtBearer\BuDing.JwtBearer.csproj", "{75FB6084-EEB5-433A-B1D8-16AF0B8259F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuDing.AutoFac", "BuDing.AutoFac\BuDing.AutoFac.csproj", "{434C30CA-4694-42F2-A6A2-D3BA7F892C7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{75FB6084-EEB5-433A-B1D8-16AF0B8259F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75FB6084-EEB5-433A-B1D8-16AF0B8259F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75FB6084-EEB5-433A-B1D8-16AF0B8259F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434C30CA-4694-42F2-A6A2-D3BA7F892C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434C30CA-4694-42F2-A6A2-D3BA7F892C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434C30CA-4694-42F2-A6A2-D3BA7F892C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434C30CA-4694-42F2-A6A2-D3BA7F892C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{6AD95460-4247-484E-B386-F30E36230470} = {FAB12922-9140-4ACE-B6D1-65566460532A}
 		{6F9E36ED-F9EB-43AB-8617-F5BC19F961AA} = {B7633A95-D480-4075-8826-A0D09B0AEDC3}
 		{75FB6084-EEB5-433A-B1D8-16AF0B8259F1} = {01E6321C-929F-4CD2-9F1E-A5CA4BD20074}
+		{434C30CA-4694-42F2-A6A2-D3BA7F892C7A} = {FAB12922-9140-4ACE-B6D1-65566460532A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8E25C43-757A-4C9D-AF6F-A3A0EAD84EA6}
