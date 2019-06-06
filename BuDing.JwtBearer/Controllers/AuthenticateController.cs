@@ -34,7 +34,7 @@ namespace BuDing.JwtBearer.Controllers
                 if (user.Password == userDto.Password)
                 {
                     var tokenHandler = new JwtSecurityTokenHandler();
-                    var key = Encoding.ASCII.GetBytes("this is my custom Secret key for authnetication");
+                    var key = Encoding.ASCII.GetBytes(Consts.SecurityKey);
                     var authTime = DateTime.Now;
                     var expiresAt = authTime.AddMinutes(1);
                     var tokenDescriptor = new SecurityTokenDescriptor()

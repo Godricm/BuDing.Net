@@ -50,7 +50,7 @@ namespace BuDing.JwtBearer
                 t.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("this is my custom Secret key for authnetication")),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Consts.SecurityKey)),
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateLifetime=true
