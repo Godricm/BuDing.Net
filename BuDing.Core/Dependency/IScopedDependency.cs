@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BuDing.Core.Dependency
+﻿namespace BuDing.Dependency
 {
     /// <summary>
     /// 生命周期 Scope 
