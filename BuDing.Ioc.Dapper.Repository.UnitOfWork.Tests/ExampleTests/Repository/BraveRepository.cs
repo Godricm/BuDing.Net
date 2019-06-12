@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BuDing.Core.Reflection;
 using BuDing.Ioc.Dapper.Repository.UnitOfWork.Extensions;
 using BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.TestHelpers;
 using BuDing.Ioc.UnitOfWork.Interfaces;
+using BuDing.Reflection;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.ExampleTests.Repository
 {

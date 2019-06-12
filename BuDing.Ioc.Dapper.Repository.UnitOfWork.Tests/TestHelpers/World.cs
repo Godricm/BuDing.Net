@@ -1,7 +1,7 @@
-﻿using BuDing.Core.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BuDing.Entity;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.TestHelpers
 {

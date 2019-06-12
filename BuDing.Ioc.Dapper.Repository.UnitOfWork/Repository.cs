@@ -1,6 +1,4 @@
-﻿using BuDing.Core.Entity;
-using BuDing.Core.Reflection;
-using BuDing.Ioc.Dapper.Repository.UnitOfWork.Containers;
+﻿using BuDing.Ioc.Dapper.Repository.UnitOfWork.Containers;
 using BuDing.Ioc.Dapper.Repository.UnitOfWork.Helpers;
 using BuDing.Ioc.UnitOfWork.Abstractions;
 using BuDing.Ioc.UnitOfWork.Exceptions;
@@ -11,6 +9,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using BuDing.Entity;
+using BuDing.Reflection;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork
 {

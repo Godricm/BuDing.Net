@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using BuDing.Core.Reflection;
 using BuDing.Ioc.UnitOfWork.Interfaces;
+using BuDing.Reflection;
 
 namespace BuDing.Ioc.UnitOfWork.Abstractions
 {

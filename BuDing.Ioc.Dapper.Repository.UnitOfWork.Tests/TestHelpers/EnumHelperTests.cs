@@ -1,10 +1,10 @@
-﻿using BuDing.Core.Extensions;
-using Dapper.FastCrud;
+﻿using Dapper.FastCrud;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BuDing.Extensions;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.TestHelpers
 {

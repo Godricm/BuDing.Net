@@ -1,5 +1,4 @@
-﻿using BuDing.Core.Entity;
-using BuDing.Ioc.UnitOfWork.Abstractions;
+﻿using BuDing.Ioc.UnitOfWork.Abstractions;
 using BuDing.Ioc.UnitOfWork.Interfaces;
 using Dapper;
 using Dapper.FastCrud;
@@ -17,6 +16,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using BuDing.Entity;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork.Tests.SpecialTests
 {

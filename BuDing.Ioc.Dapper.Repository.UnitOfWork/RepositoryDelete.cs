@@ -1,11 +1,11 @@
-﻿using BuDing.Core.Entity;
-using BuDing.Ioc.Dapper.Repository.UnitOfWork.Extensions;
+﻿using BuDing.Ioc.Dapper.Repository.UnitOfWork.Extensions;
 using BuDing.Ioc.UnitOfWork.Interfaces;
 using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using BuDing.Entity;
 
 namespace BuDing.Ioc.Dapper.Repository.UnitOfWork
 {

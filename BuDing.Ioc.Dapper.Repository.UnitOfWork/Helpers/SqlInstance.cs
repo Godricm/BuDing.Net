@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BuDing.Core.Extensions;
+using BuDing.Extensions;
 using Dapper.FastCrud;
 using Dapper.FastCrud.Mappings;
 
