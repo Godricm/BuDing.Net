@@ -1,5 +1,4 @@
-﻿using BuDing.Core.Reflection;
-using BuDing.Ioc.Dapper.Repository.UnitOfWork.Extensions;
+﻿using BuDing.Ioc.Dapper.Repository.UnitOfWork.Extensions;
 using BuDing.Ioc.UnitOfWork.Interfaces;
 using System;
 using System.Collections.Generic;
