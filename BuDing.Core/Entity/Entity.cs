@@ -1,10 +1,8 @@
-﻿using Dapper.FastCrud;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using Dapper.FastCrud;
 
-namespace BuDing.Core.Entity
+namespace BuDing.Entity
 {
     public abstract class Entity<TPrimaryKey> : IEntity<TPrimaryKey> where TPrimaryKey : IComparable
     {

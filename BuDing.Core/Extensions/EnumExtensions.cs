@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BuDing.Core.Extensions
+namespace BuDing.Extensions
 {
    public  static class EnumExtensions
     {

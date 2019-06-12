@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BuDing.Core.Entity
+namespace BuDing.Entity
 {
     public interface IEntity<TPrimaryKey> where TPrimaryKey:IComparable
     {
